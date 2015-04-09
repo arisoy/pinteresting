@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :pins
+  
+  belongs_to :name, counter_cache: true 
+
 end
